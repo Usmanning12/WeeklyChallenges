@@ -1,5 +1,4 @@
 using System;
-using System.ComponentModel.Design;
 using Xunit;
 
 namespace ChallengesWithTestsMark8.Tests
@@ -16,20 +15,17 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(4, 7, false)]
         [InlineData(-1, 1, false)]
         [InlineData(5, 6, false)]
-        public bool AreTwoNumbersTheSame(int number1, int number2, bool expected)
+        public void AreTwoNumbersTheSame(int number1, int number2, bool expected)
         {
-            if (number1 == number2)
-            {
-                return true;
-            }
-            else
-            {
-                return false; 
-            }
-            
-            
-        }  
-        
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
+
+            // Act
+            bool actual = challenger.AreTwoNumbersTheSame(number1, number2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
 
         [Theory]
         [InlineData(10, 7, 3)]
@@ -44,9 +40,16 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(5.5, 1.2, 4.3)]
         [InlineData(0.7, 0.35, 0.35)]
         [InlineData(-2.2, 1.1, -3.3)]
-        public double Subtract(double minuend, double subtrahend, double expectedDifference)
+        public void Subtract(double minuend, double subtrahend, double expectedDifference)
         {
-            return minuend - subtrahend;
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
+
+            // Act
+            double actual = challenger.Subtract(minuend, subtrahend);
+
+            // Assert
+            Assert.Equal(Math.Round(expectedDifference, 2), Math.Round(actual, 2));
         }
 
         [Theory]
@@ -59,10 +62,16 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(-5, 5, 0)]
         [InlineData(-10, -7, -17)]
         [InlineData(-10, -15, -25)]
-        public int Add(int addend1, int addend2, int expectedSum)
+        public void Add(int addend1, int addend2, int expectedSum)
         {
-           
-            return addend1 + addend2;
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
+
+            // Act
+            int actual = challenger.Add(addend1, addend2);
+
+            // Assert
+            Assert.Equal(expectedSum, actual);
         }
 
         [Theory]
@@ -77,17 +86,15 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(-10, -15, -15)]
         public void GetSmallestNumber(int number1, int number2, int expected)
         {
-            if (number1 <= number2)
-            {
-                Console.WriteLine("This is the smallest number");
-            }
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
 
-            else
-            {
-                Console.WriteLine("This number is the largest number");
-            }
+            // Act
+            int actual = challenger.GetSmallestNumber( number1,number2);
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
-        
 
         [Theory]
         [InlineData(10, 7, 70)]
@@ -103,11 +110,14 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(1234567, -7654321, -9449772114007)]
         public void Multiply(long factor1, long factor2, long product)
         {
-            while (factor1 * factor2 == product)
-            { 
-                Console.WriteLine("This is the answer of multiplication");  
-            }
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
 
+            // Act
+            long actual = challenger.Multiply(factor1, factor2);
+
+            // Assert
+            Assert.Equal(product, actual);
         }
 
         [Theory]
@@ -117,22 +127,29 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData("Leigh Ann", "Hello, Leigh Ann!")]
         [InlineData("", "Hello!")]
         // [InlineData(null, "Hello!")] // Assumption: string will not be null
-        public  string GetGreeting(string personName, string expectedGreeting)
+        public void GetGreeting(string personName, string expectedGreeting)
         {
-            if (personName == "")
-            {
-                return "Hello";
-            }
-            else
-            {
-                return $"Hello, {personName}";
-            }
-            
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
+
+            // Act
+            string actual = challenger.GetGreeting(personName);
+
+            // Assert
+            Assert.Equal(expectedGreeting, actual);
         }
 
-        public string Gethhey()
+        [Fact]
+        public void GetHey()
         {
-            return "Hey!";
+            // Arrange
+            ChallengesSet01 challenger = new ChallengesSet01();
+
+            // Act
+            string actual = challenger.GetHey();
+
+            // Assert
+            Assert.Equal("HEY!", actual);
         }
     }
 }
