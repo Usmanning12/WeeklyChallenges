@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rMXt+kSVMZE=",
+  "dgSpecHash": "iDD1X5rK1EI=",
   "success": true,
   "projectFilePath": "/Users/darronmanning/Desktop/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
   "expectedPackageFiles": [
@@ -104,8 +104,8 @@
     "/Users/darronmanning/.nuget/packages/xunit.extensibility.core/2.4.0/xunit.extensibility.core.2.4.0.nupkg.sha512",
     "/Users/darronmanning/.nuget/packages/xunit.extensibility.execution/2.4.0/xunit.extensibility.execution.2.4.0.nupkg.sha512",
     "/Users/darronmanning/.nuget/packages/xunit.runner.visualstudio/2.4.0/xunit.runner.visualstudio.2.4.0.nupkg.sha512",
-    "/Users/darronmanning/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
-    "/Users/darronmanning/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
+    "/Users/darronmanning/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/darronmanning/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }
